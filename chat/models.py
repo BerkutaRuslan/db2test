@@ -14,8 +14,7 @@ class Author(models.Model):
 
 class Messages(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    # email = models.CharField(max_length=255, validators=RegexValidator[r'@']) # YOU ASKЕD FOR REGEX
-    # VALIDATION, HERE IT IS
+    # email = models.CharField(max_length=255, validators=RegexValidator[r'@'])
     email = models.EmailField()
     text = models.CharField(max_length=100)
 
